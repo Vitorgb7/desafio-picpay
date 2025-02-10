@@ -1,0 +1,16 @@
+services:
+  database:
+    image: postgres:latest
+    restart: always
+    container_name: picpay-db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: picpay_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
