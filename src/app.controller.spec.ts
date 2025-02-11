@@ -14,9 +14,7 @@ describe('AppController', () => {
     appController = app.get<AppController>(AppController);
   });
 
-  describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
-    });
+  it('deveria retornar que a api está em funcionamento!', () => {
+    expect(appController.getHello()).toBe('API está em funcionamento!');
   });
 });
